@@ -1,0 +1,36 @@
+{
+    "name": "zhooravell/php-monobank",
+    "description": "PHP client for Monobank open API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Zhuravel",
+            "email": "zhooravell@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-filter": "*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monobank\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monobank\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
