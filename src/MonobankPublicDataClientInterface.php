@@ -15,6 +15,9 @@ use Monobank\Exception\InvalidResponseException;
 interface MonobankPublicDataClientInterface
 {
     /**
+     * Get a basic list of monobank currency rates.
+     * Information is cached and updated no more than once every 5 minutes.
+     *
      * @return array
      *
      * @throws GuzzleException
