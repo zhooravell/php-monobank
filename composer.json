@@ -11,9 +11,9 @@
     ],
     "require": {
         "php": ">=7.1",
-        "ext-mbstring": "*",
-        "ext-json": "*",
         "ext-filter": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
@@ -22,7 +22,10 @@
     "autoload": {
         "psr-4": {
             "Monobank\\": "src/"
-        }
+        },
+        "files": [
+            "src/constants.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
