@@ -22,7 +22,7 @@ class AccountIDTest extends TestCase
      */
     public function testSuccess(string $id)
     {
-        $this->assertEquals($id, strval(new AccountID($id)));
+        $this->assertEquals($id, (string) (new AccountID($id)));
     }
 
     /**

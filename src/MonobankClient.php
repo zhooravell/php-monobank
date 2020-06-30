@@ -90,7 +90,7 @@ class MonobankClient implements MonobankPublicDataClientInterface, MonobankPriva
     {
         $headers = [
             'Accept' => 'application/json',
-            'User-Agent' => sprintf('%s MonobankPHPClient/%s', $this->client->getConfig('headers')['User-Agent'], MONOBANK_CLIENT_VERSION),
+            'User-Agent' => sprintf('%s MonobankPHPClient/%s', $this->client->getConfig('headers')['User-Agent'] ?? '', MONOBANK_CLIENT_VERSION),
         ];
 
         if (null !== $token) {
