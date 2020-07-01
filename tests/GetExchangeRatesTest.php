@@ -51,8 +51,8 @@ class GetExchangeRatesTest extends TestCase
 
         $result = $client->getExchangeRates();
 
-        $this->assertTrue(is_array($result));
-        $this->assertTrue(1 == count($result));
+        $this->assertIsArray($result);
+        $this->assertCount(1, $result);
         $this->assertEquals(840, $result[0]['currencyCodeA']);
         $this->assertEquals(980, $result[0]['currencyCodeB']);
         $this->assertEquals(1552392228, $result[0]['date']);
@@ -148,7 +148,7 @@ class GetExchangeRatesTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

@@ -56,13 +56,13 @@ class GetPersonalStatementTest extends TestCase
         $client = new MonobankClient($httpClient, $token);
         $result = $client->getPersonalStatement(new PersonalStatementRequest(new DateTime(), new DateTime()));
 
-        $this->assertTrue(is_array($result));
-        $this->assertTrue(1 == count($result));
+        $this->assertIsArray($result);
+        $this->assertCount(1, $result);
         $this->assertEquals('ZuHWzqkKGVo=', $result[0]['id']);
         $this->assertEquals(1554466347, $result[0]['time']);
         $this->assertEquals('Покупка щастя', $result[0]['description']);
         $this->assertEquals(7997, $result[0]['mcc']);
-        $this->assertEquals(false, $result[0]['hold']);
+        $this->assertFalse($result[0]['hold']);
         $this->assertEquals(-95000, $result[0]['amount']);
         $this->assertEquals(-95000, $result[0]['operationAmount']);
         $this->assertEquals(980, $result[0]['currencyCode']);
@@ -215,7 +215,7 @@ class GetPersonalStatementTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

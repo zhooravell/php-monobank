@@ -51,9 +51,9 @@ class GetClientInfoTest extends TestCase
 
         $result = $client->getClientInfo();
 
-        $this->assertTrue(is_array($result));
-        $this->assertTrue(is_array($result['accounts']));
-        $this->assertTrue(1 == count($result['accounts']));
+        $this->assertIsArray($result);
+        $this->assertIsArray($result['accounts']);
+        $this->assertCount(1, $result['accounts']);
         $this->assertEquals('Mono cat', $result['name']);
     }
 
@@ -147,7 +147,7 @@ class GetClientInfoTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
