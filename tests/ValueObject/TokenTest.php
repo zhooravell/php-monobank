@@ -22,7 +22,7 @@ class TokenTest extends TestCase
      */
     public function testSuccess(string $token)
     {
-        $this->assertEquals($token, (string) (new Token($token)));
+        $this->assertSame($token, (string) (new Token($token)));
     }
 
     /**
