@@ -58,17 +58,17 @@ class GetPersonalStatementTest extends TestCase
 
         $this->assertIsArray($result);
         $this->assertCount(1, $result);
-        $this->assertEquals('ZuHWzqkKGVo=', $result[0]['id']);
-        $this->assertEquals(1554466347, $result[0]['time']);
-        $this->assertEquals('Покупка щастя', $result[0]['description']);
-        $this->assertEquals(7997, $result[0]['mcc']);
+        $this->assertSame('ZuHWzqkKGVo=', $result[0]['id']);
+        $this->assertSame(1554466347, $result[0]['time']);
+        $this->assertSame('Покупка щастя', $result[0]['description']);
+        $this->assertSame(7997, $result[0]['mcc']);
         $this->assertFalse($result[0]['hold']);
-        $this->assertEquals(-95000, $result[0]['amount']);
-        $this->assertEquals(-95000, $result[0]['operationAmount']);
-        $this->assertEquals(980, $result[0]['currencyCode']);
-        $this->assertEquals(0, $result[0]['commissionRate']);
-        $this->assertEquals(19000, $result[0]['cashbackAmount']);
-        $this->assertEquals(10050000, $result[0]['balance']);
+        $this->assertSame(-95000, $result[0]['amount']);
+        $this->assertSame(-95000, $result[0]['operationAmount']);
+        $this->assertSame(980, $result[0]['currencyCode']);
+        $this->assertSame(0, $result[0]['commissionRate']);
+        $this->assertSame(19000, $result[0]['cashbackAmount']);
+        $this->assertSame(10050000, $result[0]['balance']);
     }
 
     /**
