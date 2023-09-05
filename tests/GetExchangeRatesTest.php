@@ -53,12 +53,12 @@ class GetExchangeRatesTest extends TestCase
 
         $this->assertIsArray($result);
         $this->assertCount(1, $result);
-        $this->assertEquals(840, $result[0]['currencyCodeA']);
-        $this->assertEquals(980, $result[0]['currencyCodeB']);
-        $this->assertEquals(1552392228, $result[0]['date']);
-        $this->assertEquals(27, $result[0]['rateSell']);
-        $this->assertEquals(27.2, $result[0]['rateBuy']);
-        $this->assertEquals(27.1, $result[0]['rateCross']);
+        $this->assertSame(840, $result[0]['currencyCodeA']);
+        $this->assertSame(980, $result[0]['currencyCodeB']);
+        $this->assertSame(1552392228, $result[0]['date']);
+        $this->assertSame(27, $result[0]['rateSell']);
+        $this->assertSame(27.2, $result[0]['rateBuy']);
+        $this->assertSame(27.1, $result[0]['rateCross']);
     }
 
     /**

@@ -54,7 +54,7 @@ class GetClientInfoTest extends TestCase
         $this->assertIsArray($result);
         $this->assertIsArray($result['accounts']);
         $this->assertCount(1, $result['accounts']);
-        $this->assertEquals('Mono cat', $result['name']);
+        $this->assertSame('Mono cat', $result['name']);
     }
 
     /**
